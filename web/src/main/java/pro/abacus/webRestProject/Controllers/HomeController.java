@@ -7,21 +7,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import pro.abacus.webRestProject.Repositories.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import pro.abacus.webRestProject.Services.UserService;
 import pro.abacus.webRestProject.models.User;
 
+@Slf4j
 @Controller
 @RequestMapping(path = "/")
 public class HomeController {
 
 	@Autowired
 	private UserService userService;
-	
-	/*@Autowired
-	private UserRepository userRepository;*/
 
 	@GetMapping("/registration")
 	public String showRegistrationForm(Model model, User user) {
@@ -31,17 +28,20 @@ public class HomeController {
 	// handle post request with validation
 	@PostMapping("/registration")
 	public String processRegistrationForm(@Valid User user, Errors errors) {
-
+		
 		if (errors.hasErrors()) {
 			return "registration";
+			
 		}
         if (userService.isDuplicate(user)){
         	errors.rejectValue("name","name.duplicate", "User with this username already exists");
-        	return "registration";
+        	log.info("Processing user registration: " + user);
+        	return "registration";	
 		}
+        
         else{
         	userService.save(user);
-        	// add logger
+        	log.info("User saved: " + user);
     		return "login";
         }	
 	}
@@ -53,8 +53,8 @@ public class HomeController {
 
 	@PostMapping("/login")
 	public @ResponseBody String processLoginForm(Model model, String error) {
-		// add logger
-		return "login";
+		
+		return "/login";
 	}
 
 }

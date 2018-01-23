@@ -7,6 +7,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -61,8 +62,8 @@ public class User {
 		return userId;
 	}
 
-	public void setUser_id(int user_id) {
-		this.userId = user_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getName() {

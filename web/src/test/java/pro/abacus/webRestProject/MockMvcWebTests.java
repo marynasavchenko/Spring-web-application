@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject.Configurations;
+package pro.abacus.webRestProject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
@@ -30,7 +31,7 @@ public class MockMvcWebTests {
 		 mockMvc.perform(get("/"))
 				//asserts an HTTP 200 response code
 				.andExpect(status().isOk())
-				.andExpect(view().name("forward:home.htm"));
+				.andExpect(view().name("home"));
 		
 		}
 	@Test
@@ -70,7 +71,7 @@ public class MockMvcWebTests {
 		 mockMvc.perform(post("/login")
 				.param("name", "test1")
 				.param("password", "password1"))
-				.andExpect(status().isOk());
+		 		.andExpect(redirectedUrl("/login"));
 	}
 	
 }

@@ -6,11 +6,15 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import lombok.extern.slf4j.Slf4j;
+import pro.abacus.webRestProject.Controllers.QuoteController;
+
+@Slf4j
 @Service
 public class QuoteServiceImpl implements QuoteService {
 
-	@Autowired
-	CounterService counterService;
+	/*@Autowired
+	CounterService counterService;*/
 
 	private final RestTemplate restTemplate;
 
@@ -34,10 +38,11 @@ public class QuoteServiceImpl implements QuoteService {
 		}
 
 		/*POSTs data to a URL, returning an object mapped to the response body */
-		Response response = this.restTemplate.getForObject("http://quotes.rest/qod.json?categorie={art}",
+		Response response = this.restTemplate.getForObject("http://quotes.rest/qod.json?categorie={inspire}",
 				            Response.class, quoteCategory);
 
 		Quote quote = response.getQuote();
+		log.info("Getting quote from rest service: " + quote);
 		return quote;
 	}
 

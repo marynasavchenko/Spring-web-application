@@ -22,6 +22,7 @@ public class Quote {
 
 	}
 
+
 	public String getId() {
 		return id;
 	}

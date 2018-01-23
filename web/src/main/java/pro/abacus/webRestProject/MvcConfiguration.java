@@ -7,6 +7,10 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import lombok.extern.slf4j.Slf4j;
+import pro.abacus.webRestProject.Controllers.HomeController;
+
+@Slf4j
 @Configuration
 @EnableWebMvc
 @EnableAutoConfiguration
@@ -14,7 +18,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		System.out.println("in mvc config");
+		log.info("in mvc configuration");
 		registry.addViewController("/").setViewName("home");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 
@@ -22,7 +26,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		System.out.println("configure serve handling");
+		log.info("configure servlet handling");
 		configurer.enable();
 	}
 

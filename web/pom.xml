@@ -87,6 +87,12 @@
 			<artifactId>thymeleaf-spring5</artifactId>
 			<version>3.0.8.RELEASE</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 	</dependencies>
 
