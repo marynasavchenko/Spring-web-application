@@ -1,5 +1,8 @@
 package pro.abacus.webRestProject;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,14 +10,16 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import lombok.extern.slf4j.Slf4j;
+//import org.slf4j.*;
 import pro.abacus.webRestProject.Controllers.HomeController;
 
-@Slf4j
+
 @Configuration
 @EnableWebMvc
 @EnableAutoConfiguration
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
+	
+	final static Logger log = LoggerFactory.getLogger(MvcConfiguration.class);
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {

@@ -2,20 +2,22 @@ package pro.abacus.webRestProject.Controllers;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import lombok.extern.slf4j.Slf4j;
+
 import pro.abacus.webRestProject.Services.UserService;
 import pro.abacus.webRestProject.models.User;
 
-@Slf4j
 @Controller
 @RequestMapping(path = "/")
 public class HomeController {
+	final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
 	@Autowired
 	private UserService userService;
@@ -25,7 +27,7 @@ public class HomeController {
 		return "registration";
 	}
 
-	// handle post request with validation
+	 //handle post request with validation
 	@PostMapping("/registration")
 	public String processRegistrationForm(@Valid User user, Errors errors) {
 		

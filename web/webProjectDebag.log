@@ -1,0 +1,24 @@
+17:44:14,708  INFO pro.abacus.webRestProject.WebApplication:48 - Starting WebApplication on BigBrother with PID 1352 (E:\java\repos\Java-Spring\web\target\classes started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+17:44:14,713 DEBUG pro.abacus.webRestProject.WebApplication:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:44:14,715  INFO pro.abacus.webRestProject.WebApplication:593 - No active profile set, falling back to default profiles: default
+17:44:29,757  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration TEST
+17:44:29,885  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+17:44:34,454  INFO pro.abacus.webRestProject.WebApplication:57 - Started WebApplication in 20.277 seconds (JVM running for 22.299)
+17:45:50,432  INFO pro.abacus.webRestProject.WebApplication:48 - Starting WebApplication on BigBrother with PID 12884 (E:\java\repos\Java-Spring\web\target\classes started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+17:45:50,437 DEBUG pro.abacus.webRestProject.WebApplication:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:45:50,438  INFO pro.abacus.webRestProject.WebApplication:593 - No active profile set, falling back to default profiles: default
+17:46:05,355  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration TEST
+17:46:05,471  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+17:46:09,978  INFO pro.abacus.webRestProject.WebApplication:57 - Started WebApplication in 20.06 seconds (JVM running for 21.972)
+17:51:03,069  INFO pro.abacus.webRestProject.WebApplication:48 - Starting WebApplication on BigBrother with PID 12328 (E:\java\repos\Java-Spring\web\target\classes started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+17:51:03,087 DEBUG pro.abacus.webRestProject.WebApplication:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:51:03,091  INFO pro.abacus.webRestProject.WebApplication:593 - No active profile set, falling back to default profiles: default
+17:51:56,220  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration TEST
+17:51:56,583  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+17:52:14,994  INFO pro.abacus.webRestProject.WebApplication:57 - Started WebApplication in 73.876 seconds (JVM running for 81.078)
+17:58:39,957  INFO pro.abacus.webRestProject.WebApplication:48 - Starting WebApplication on BigBrother with PID 3764 (E:\java\repos\Java-Spring\web\target\classes started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+17:58:39,968 DEBUG pro.abacus.webRestProject.WebApplication:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:58:39,971  INFO pro.abacus.webRestProject.WebApplication:593 - No active profile set, falling back to default profiles: default
+17:59:34,706  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+17:59:35,265  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+17:59:50,740  INFO pro.abacus.webRestProject.WebApplication:57 - Started WebApplication in 72.558 seconds (JVM running for 79.143)

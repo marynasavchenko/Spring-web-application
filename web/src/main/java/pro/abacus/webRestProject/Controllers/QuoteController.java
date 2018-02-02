@@ -9,11 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import lombok.extern.slf4j.Slf4j;
 import pro.abacus.webRestProject.MvcConfiguration;
 import pro.abacus.webRestProject.restClient.*;
 
-@Slf4j
 @Controller
 @RequestMapping(path = "/")
 public class QuoteController {
