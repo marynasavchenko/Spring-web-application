@@ -1,7 +1,8 @@
-## **Java Spring example**
+## **Web application based on Spring **
 
-Project has registration/login page, which are available for everyone. After successful login users can see quotes that is consumed from public API (https://theysaidso.com/api/#qod). 
-For logging is used facade slf4j with log4j implementation. 
+Protected web application which has registration/login page, users database, elements of security, consume data from public API
+(https://theysaidso.com/api/#qod). 
+
 
 ## **Installing**
 
