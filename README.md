@@ -1,4 +1,4 @@
-## **Web application based on Spring **
+## **Web application based on Spring**
 
 Protected web application which has registration/login page, users database, elements of security, consume data from public API
 (https://theysaidso.com/api/#qod). 
