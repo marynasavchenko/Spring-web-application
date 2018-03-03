@@ -19,6 +19,8 @@ import pro.abacus.webRestProject.models.User;
 public class HomeController {
 	final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
+	private static final String HttpStatus = null;
+
 	@Autowired
 	private UserService userService;
 

@@ -3034,3 +3034,31 @@
 17:45:09,636  INFO org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter:241 - Unregistering JMX-exposed beans
 17:45:09,638  INFO org.springframework.jmx.export.annotation.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
 17:45:09,641  INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+18:31:32,960 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+18:47:22,113 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
