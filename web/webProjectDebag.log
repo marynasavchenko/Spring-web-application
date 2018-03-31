@@ -3172,3 +3172,15 @@
 12:05:01,387  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
 12:05:20,747  INFO pro.abacus.webRestProject.WebApplication:57 - Started WebApplication in 89.561 seconds (JVM running for 100.128)
 12:08:15,353  INFO pro.abacus.webRestProject.restClient.QuoteServiceImpl:49 - Getting quote from rest service: pro.abacus.webRestProject.restClient.Quote@2a845051
+17:57:00,916  INFO pro.abacus.webRestProject.WebApplicationTest:48 - Starting WebApplicationTest on BigBrother with PID 8244 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+17:57:00,938 DEBUG pro.abacus.webRestProject.WebApplicationTest:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:57:00,939  INFO pro.abacus.webRestProject.WebApplicationTest:593 - No active profile set, falling back to default profiles: default
+17:57:21,197  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+17:57:21,338  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+17:57:27,289  INFO pro.abacus.webRestProject.WebApplicationTest:57 - Started WebApplicationTest in 28.124 seconds (JVM running for 33.738)
+18:02:25,119  INFO pro.abacus.webRestProject.WebApplicationTest:48 - Starting WebApplicationTest on BigBrother with PID 10136 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:02:25,126 DEBUG pro.abacus.webRestProject.WebApplicationTest:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:02:25,127  INFO pro.abacus.webRestProject.WebApplicationTest:593 - No active profile set, falling back to default profiles: default
+18:02:41,942  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+18:02:42,117  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+18:02:48,400  INFO pro.abacus.webRestProject.WebApplicationTest:57 - Started WebApplicationTest in 24.085 seconds (JVM running for 26.795)
