@@ -3184,3 +3184,129 @@
 18:02:41,942  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
 18:02:42,117  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
 18:02:48,400  INFO pro.abacus.webRestProject.WebApplicationTest:57 - Started WebApplicationTest in 24.085 seconds (JVM running for 26.795)
+18:11:56,072  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:11:56,081 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:11:56,083  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:00,375  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:00,376 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:00,377  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:02,130  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:02,130 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:02,131  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:03,566  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:03,567 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:03,567  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:05,065  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:05,073 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:05,074  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:06,315  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:06,316 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:06,317  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:07,544  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:07,544 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:07,545  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:08,961  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:08,961 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:08,962  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:10,181  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:10,182 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:10,183  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:12:11,330  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 12996 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:12:11,331 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:12:11,331  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:09,157  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:09,164 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:09,167  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:13,307  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:13,307 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:13,308  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:14,991  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:14,992 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:14,992  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:16,323  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:16,324 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:16,325  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:17,583  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:17,584 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:17,585  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:18,790  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:18,790 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:18,791  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:20,149  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:20,149 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:20,150  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:21,347  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:21,347 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:21,348  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:22,568  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:22,571 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:22,575  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:14:23,748  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 13148 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:14:23,749 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:14:23,749  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:18:23,791  INFO pro.abacus.webRestProject.WebApplicationTest:48 - Starting WebApplicationTest on BigBrother with PID 11584 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:18:23,799 DEBUG pro.abacus.webRestProject.WebApplicationTest:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:18:23,801  INFO pro.abacus.webRestProject.WebApplicationTest:593 - No active profile set, falling back to default profiles: default
+18:18:40,541  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+18:18:40,722  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+18:18:47,066  INFO pro.abacus.webRestProject.WebApplicationTest:57 - Started WebApplicationTest in 24.09 seconds (JVM running for 26.684)
+18:27:55,705  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 5892 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:27:55,712 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:27:55,713  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:28:00,367  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+18:28:00,482  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+18:28:05,238  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.469 seconds (JVM running for 13.36)
+18:38:48,286  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 10692 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:38:48,293 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:38:48,295  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:38:52,980  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+18:38:53,097  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+18:38:57,764  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.34 seconds (JVM running for 13.554)
+18:49:16,429  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 2624 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+18:49:16,437 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+18:49:16,438  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+18:49:21,012  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+18:49:21,105  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+18:49:25,773  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.231 seconds (JVM running for 13.65)
+18:49:26,611  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@2da66a44
+18:49:28,029  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@12b5736c
+19:17:41,519  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 4528 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+19:17:41,525 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+19:17:41,526  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+19:17:46,072  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+19:17:46,170  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+19:17:50,696  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.038 seconds (JVM running for 13.124)
+19:17:51,422  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@527fc8e
+19:17:52,668  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@784223e9
+19:19:25,426  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 10748 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+19:19:25,434 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+19:19:25,436  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+19:19:29,983  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+19:19:30,097  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+19:19:34,725  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.162 seconds (JVM running for 12.986)
+19:19:35,437  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@707b1a44
+19:19:36,800  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@7668892a
+19:20:46,182  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 9712 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+19:20:46,190 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+19:20:46,192  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+19:20:50,801  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+19:20:50,910  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+19:20:55,786  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.497 seconds (JVM running for 13.393)
+19:20:56,544  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@527fc8e
+19:20:57,812  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@3625a016
+19:21:29,515  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 8812 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+19:21:29,522 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+19:21:29,523  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+19:21:34,308  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+19:21:34,422  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+19:21:38,860  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 10.218 seconds (JVM running for 13.153)
+19:21:39,583  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@707b1a44
+19:21:40,868  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@7668892a
+19:47:37,810  INFO pro.abacus.webRestProject.MockMvcWebTests:48 - Starting MockMvcWebTests on BigBrother with PID 3448 (started by Maryna Savchenko in E:\java\repos\Java-Spring\web)
+19:47:37,818 DEBUG pro.abacus.webRestProject.MockMvcWebTests:51 - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+19:47:37,821  INFO pro.abacus.webRestProject.MockMvcWebTests:593 - No active profile set, falling back to default profiles: default
+19:47:42,166  INFO pro.abacus.webRestProject.MvcConfiguration:26 - in mvc configuration
+19:47:42,279  INFO pro.abacus.webRestProject.MvcConfiguration:34 - configure servlet handling
+19:47:46,770  INFO pro.abacus.webRestProject.MockMvcWebTests:57 - Started MockMvcWebTests in 9.763 seconds (JVM running for 12.565)
+19:47:47,438  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@57435801
+19:47:48,656  INFO pro.abacus.webRestProject.Controllers.HomeController:48 - User saved: pro.abacus.webRestProject.models.User@42505474

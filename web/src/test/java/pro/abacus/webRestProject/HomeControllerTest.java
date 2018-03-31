@@ -3,50 +3,46 @@ package pro.abacus.webRestProject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
-//import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
+import pro.abacus.webRestProject.Controllers.HomeController;
+import pro.abacus.webRestProject.Services.UserService;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-//set the Runner to run tests
 @RunWith(SpringRunner.class)
-//Creates ApplicationContext
-@SpringBootTest
-@AutoConfigureMockMvc
-public class MockMvcWebTests {
+//Web environment is required, instantiate only one controller
+@WebMvcTest(HomeController.class)
+@WithMockUser(roles = "USER")
+public class HomeControllerTest {
 	
-	@Autowired
-	private WebApplicationContext context;
-	
+	@MockBean
+	private UserService userService;
 	
 	@Autowired
 	private MockMvc mockMvc;
 
 	@Test
-	public void homePage() throws Exception {
+	public void shouldShowHomePage() throws Exception {
 		 mockMvc.perform(get("/"))
-				//asserts an HTTP 200 response code
 				.andExpect(status().isOk())
 				.andExpect(view().name("home"));
-		
 		}
+	
 	@Test
 	public void shoulShowRegistrationForm() throws Exception{
 		 mockMvc.perform(get("/registration"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("registration"));
-				//.andExpect(model().attributeExists("user"));
+				.andExpect(view().name("registration"))
+				.andExpect(model().attributeExists("user"));
 	}
 	
 	@Test
@@ -56,7 +52,7 @@ public class MockMvcWebTests {
 				.andExpect(view().name("login"));
 	}
 	@Test
-	public void shouldPostREgistrationDetails() throws Exception{
+	public void shouldPostRegistrationDetails() throws Exception{
 		 mockMvc.perform(post("/registration")
 				.param("userID", "123")
 				.param("name", "test1")
@@ -80,12 +76,7 @@ public class MockMvcWebTests {
 		mockMvc.perform(post("/login")
 				.param("name", "test9")
 				.param("password", "test9"))
-		 		//.andExpect(redirectedUrl("/home"));
-		.andExpect(status().isOk());
-		 
-		 
+				.andExpect(status().isOk()); 
 	}
-	
-	
 	
 }

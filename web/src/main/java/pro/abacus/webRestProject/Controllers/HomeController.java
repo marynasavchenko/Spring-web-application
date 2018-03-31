@@ -58,7 +58,7 @@ public class HomeController {
 	@PostMapping("/login")
 	public @ResponseBody String processLoginForm(Model model, String error) {
 		
-		return "/login";
+		return "login";
 	}
 
 }
