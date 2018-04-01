@@ -11,19 +11,15 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-//set the Runner to run tests
 @RunWith(SpringRunner.class)
 //Creates ApplicationContext
 //Loads an EmbeddedWebApplicationContext and provides a real servlet environment
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = WebApplication.class)
 public class HttpRequestTest {
 	
-	//start server on random port to avoid conflicts in test environments
-	//inject the actual port into test
 	@LocalServerPort
-    private int port;
+    private int rundomPort;
 	
-	//provided automatically
 	@Autowired
     private TestRestTemplate restTemplate;
 	

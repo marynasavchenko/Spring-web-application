@@ -10,12 +10,16 @@ import pro.abacus.webRestProject.models.User;
 @Service
 public class UserServiceImplementation implements UserService {
 
-	@Autowired
 	private UserRepository userRepository;
-	@Autowired
 	private RoleRepository roleRepository;
-	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	@Autowired
+	public UserServiceImplementation(UserRepository userRepository,RoleRepository roleRepository, BCryptPasswordEncoder encoder){
+		this.userRepository=userRepository;
+		this.roleRepository=roleRepository;
+		this.bCryptPasswordEncoder=encoder;
+	}
 
 	@Override
 	public void save(User user) {

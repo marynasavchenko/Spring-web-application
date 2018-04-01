@@ -19,7 +19,7 @@ import pro.abacus.webRestProject.models.User;
 // run tests against a real database
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 
-public class UserRepositoryTest {
+public class UserRepositoryIntegrationTest {
 
 	@Autowired
 	UserRepository userRepository;

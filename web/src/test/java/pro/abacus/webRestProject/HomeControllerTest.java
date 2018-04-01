@@ -11,7 +11,9 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import pro.abacus.webRestProject.Controllers.HomeController;
 import pro.abacus.webRestProject.Services.UserService;
+import pro.abacus.webRestProject.models.User;
 
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
@@ -23,11 +25,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser(roles = "USER")
 public class HomeControllerTest {
 	
-	@MockBean
-	private UserService userService;
+	@Autowired
+	private HomeController homeController;
 	
 	@Autowired
 	private MockMvc mockMvc;
+	
+	@MockBean
+	private UserService userService;
+	
+	@MockBean
+	private User user;
 
 	@Test
 	public void shouldShowHomePage() throws Exception {
@@ -74,8 +82,10 @@ public class HomeControllerTest {
 		
 		mockMvc.perform(post("/login")
 				.param("name", "test9")
-				.param("password", "test9"))
+				.param("password", "test9")
+				)
 				.andExpect(status().isOk()); 
 	}
+	
 	
 }

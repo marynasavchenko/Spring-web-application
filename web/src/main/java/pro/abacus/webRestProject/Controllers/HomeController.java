@@ -17,19 +17,23 @@ import pro.abacus.webRestProject.models.User;
 @Controller
 @RequestMapping(path = "/")
 public class HomeController {
+	
 	final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
-	private static final String HttpStatus = null;
-
-	@Autowired
+	
 	private UserService userService;
+	
+	@Autowired
+	public HomeController(UserService userService){
+		this.userService=userService;
+		
+	}
 
 	@GetMapping("/registration")
 	public String showRegistrationForm(Model model, User user) {
 		return "registration";
 	}
 
-	 //handle post request with validation
 	@PostMapping("/registration")
 	public String processRegistrationForm(@Valid User user, Errors errors) {
 		
