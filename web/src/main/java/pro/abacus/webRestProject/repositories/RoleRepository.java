@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject.Repositories;
+package pro.abacus.webRestProject.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

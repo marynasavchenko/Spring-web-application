@@ -1,11 +1,12 @@
-package pro.abacus.webRestProject.Services;
+package pro.abacus.webRestProject.services;
 
 import java.util.HashSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import pro.abacus.webRestProject.Repositories.*;
+
 import pro.abacus.webRestProject.models.User;
+import pro.abacus.webRestProject.repositories.*;
 
 @Service
 public class UserServiceImplementation implements UserService {

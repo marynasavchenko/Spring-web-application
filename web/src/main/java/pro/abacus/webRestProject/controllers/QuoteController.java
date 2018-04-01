@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject.Controllers;
+package pro.abacus.webRestProject.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

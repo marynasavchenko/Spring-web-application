@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import pro.abacus.webRestProject.MvcConfiguration;
-import pro.abacus.webRestProject.Controllers.QuoteController;
+import pro.abacus.webRestProject.controllers.QuoteController;
 
 @Service
 public class QuoteServiceImpl implements QuoteService {

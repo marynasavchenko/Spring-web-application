@@ -12,8 +12,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import pro.abacus.webRestProject.Repositories.UserRepository;
-import pro.abacus.webRestProject.Services.WebUserDetailsService;
+import pro.abacus.webRestProject.repositories.UserRepository;
+import pro.abacus.webRestProject.services.WebUserDetailsService;
 
 
 

@@ -1,12 +1,12 @@
-package pro.abacus.webRestProject.Services;
+package pro.abacus.webRestProject.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
-import pro.abacus.webRestProject.Repositories.UserRepository;
 import pro.abacus.webRestProject.models.User;
 import pro.abacus.webRestProject.models.WebUserDetails;
+import pro.abacus.webRestProject.repositories.UserRepository;
 
 @Service
 public class WebUserDetailsService implements UserDetailsService {

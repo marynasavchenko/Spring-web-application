@@ -10,8 +10,7 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-//import org.slf4j.*;
-import pro.abacus.webRestProject.Controllers.HomeController;
+import pro.abacus.webRestProject.controllers.HomeController;
 
 
 @Configuration

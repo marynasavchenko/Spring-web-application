@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject.Controllers;
+package pro.abacus.webRestProject.controllers;
 
 import javax.validation.Valid;
 
@@ -10,9 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-
-import pro.abacus.webRestProject.Services.UserService;
 import pro.abacus.webRestProject.models.User;
+import pro.abacus.webRestProject.services.UserService;
 
 @Controller
 @RequestMapping(path = "/")

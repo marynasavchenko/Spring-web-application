@@ -11,8 +11,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import pro.abacus.webRestProject.Repositories.UserRepository;
 import pro.abacus.webRestProject.models.User;
+import pro.abacus.webRestProject.repositories.UserRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
