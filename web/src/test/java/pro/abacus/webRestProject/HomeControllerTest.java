@@ -19,7 +19,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 @RunWith(SpringRunner.class)
-//Web environment is required, instantiate only one controller
 @WebMvcTest(HomeController.class)
 @WithMockUser(roles = "USER")
 public class HomeControllerTest {
