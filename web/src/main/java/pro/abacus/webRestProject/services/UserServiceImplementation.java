@@ -32,17 +32,12 @@ public class UserServiceImplementation implements UserService {
 
 	@Override
 	public User findByUsername(String username) {
-
 		return userRepository.findByName(username);
 	}
 
 	@Override
 	public boolean isDuplicate(User user) {
-		
-		if(userRepository.existsByName(user.getName())){
-			return true;
-		}
-		return false;
+		return userRepository.existsByName(user.getName());	
 	}
 
 }
