@@ -19,13 +19,11 @@ public class HomeController {
 	
 	final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
-	
 	private UserService userService;
 	
 	@Autowired
 	public HomeController(UserService userService){
-		this.userService=userService;
-		
+		this.userService=userService;	
 	}
 
 	@GetMapping("/registration")

@@ -52,7 +52,7 @@ public class User {
 	public User(User users) {
 		this.name = users.getName();
 		this.email = users.getEmail();
-		// this.active = users.getActive();
+		this.active = users.getActive();
 		this.roles = users.getRoles();
 		this.userId = users.getUserId();
 		this.password = users.getPassword();
