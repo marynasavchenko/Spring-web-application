@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import pro.abacus.webRestProject.models.User;
 import pro.abacus.webRestProject.services.UserService;
+import pro.abacus.webRestProject.services.ValidationService;
 
 @Controller
 @RequestMapping(path = "/")
@@ -21,9 +22,12 @@ public class HomeController {
 
 	private UserService userService;
 	
+	private ValidationService validationService;
+	
 	@Autowired
-	public HomeController(UserService userService){
+	public HomeController(UserService userService, ValidationService validationService){
 		this.userService=userService;	
+		this.validationService=validationService;
 	}
 
 	@GetMapping("/registration")
@@ -34,21 +38,15 @@ public class HomeController {
 	@PostMapping("/registration")
 	public String processRegistrationForm(@Valid User user, Errors errors) {
 		
-		if (errors.hasErrors()) {
-			return "registration";
-			
-		}
-        if (userService.isDuplicate(user)){
-        	errors.rejectValue("name","name.duplicate", "User with this username already exists");
-        	log.info("Processing user registration: " + user);
-        	return "registration";	
-		}
-        
-        else{
-        	userService.save(user);
+		if (validationService.validate(user, errors)){
+			userService.save(user);
         	log.info("User saved: " + user);
     		return "login";
-        }	
+		}
+		else{
+			log.info("Processing user registration: " + user);
+			return "registration";
+		}
 	}
 
 	@GetMapping("/login")
