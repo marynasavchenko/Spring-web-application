@@ -9,14 +9,14 @@ import pro.abacus.webRestProject.models.User;
 import pro.abacus.webRestProject.repositories.*;
 
 @Service
-public class UserServiceImplementation implements UserService {
+public class UserServiceImpl implements UserService {
 
 	private UserRepository userRepository;
 	private RoleRepository roleRepository;
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@Autowired
-	public UserServiceImplementation(UserRepository userRepository,RoleRepository roleRepository, BCryptPasswordEncoder encoder){
+	public UserServiceImpl(UserRepository userRepository,RoleRepository roleRepository, BCryptPasswordEncoder encoder){
 		this.userRepository=userRepository;
 		this.roleRepository=roleRepository;
 		this.bCryptPasswordEncoder=encoder;

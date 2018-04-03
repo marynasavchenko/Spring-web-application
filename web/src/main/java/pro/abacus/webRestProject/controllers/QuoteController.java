@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import pro.abacus.webRestProject.MvcConfiguration;
 import pro.abacus.webRestProject.restClient.*;
 
 @Controller

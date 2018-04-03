@@ -1,16 +1,11 @@
-package pro.abacus.webRestProject;
+package pro.abacus.webRestProject.services;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.Errors;
 
 import pro.abacus.webRestProject.models.User;
@@ -20,9 +15,7 @@ import pro.abacus.webRestProject.services.ValidationServiceImpl;
 
 public class ValidationServiceTest {
 	
-	
-	@Mock
-	private User user;
+	private User user = mock(User.class);
 	
 	private UserService userService = mock(UserService.class);
 	

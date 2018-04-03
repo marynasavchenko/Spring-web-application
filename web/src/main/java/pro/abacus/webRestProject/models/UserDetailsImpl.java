@@ -7,9 +7,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class WebUserDetails extends User implements UserDetails {
+public class UserDetailsImpl extends User implements UserDetails {
 
-	public WebUserDetails(final User users) {
+	public UserDetailsImpl(final User users) {
 		super(users);
 	}
 

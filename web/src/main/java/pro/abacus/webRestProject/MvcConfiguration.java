@@ -10,8 +10,6 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import pro.abacus.webRestProject.controllers.HomeController;
-
 
 @Configuration
 @EnableWebMvc

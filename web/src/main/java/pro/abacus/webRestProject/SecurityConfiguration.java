@@ -13,7 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import pro.abacus.webRestProject.repositories.UserRepository;
-import pro.abacus.webRestProject.services.WebUserDetailsService;
+import pro.abacus.webRestProject.services.UserDetailsServiceImpl;
 
 
 
@@ -24,7 +24,7 @@ import pro.abacus.webRestProject.services.WebUserDetailsService;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
-	private WebUserDetailsService userDetailsService;
+	private UserDetailsServiceImpl userDetailsService;
 	
 	@Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {

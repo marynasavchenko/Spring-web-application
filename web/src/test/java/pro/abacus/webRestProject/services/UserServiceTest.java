@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject;
+package pro.abacus.webRestProject.services;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
@@ -17,7 +17,7 @@ import pro.abacus.webRestProject.models.User;
 import pro.abacus.webRestProject.repositories.RoleRepository;
 import pro.abacus.webRestProject.repositories.UserRepository;
 import pro.abacus.webRestProject.services.UserService;
-import pro.abacus.webRestProject.services.UserServiceImplementation;
+import pro.abacus.webRestProject.services.UserServiceImpl;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserServiceTest {
@@ -42,7 +42,7 @@ public class UserServiceTest {
 	
 	@Before
 	public void setup(){
-	userService = new UserServiceImplementation(userRepository, roleRepository, encoder);
+	userService = new UserServiceImpl(userRepository, roleRepository, encoder);
 	}
 	
 	@Test
