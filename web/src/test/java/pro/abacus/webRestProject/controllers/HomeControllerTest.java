@@ -1,4 +1,4 @@
-package pro.abacus.webRestProject;
+package pro.abacus.webRestProject.controllers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

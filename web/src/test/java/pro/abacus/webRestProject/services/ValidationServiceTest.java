@@ -19,17 +19,12 @@ public class ValidationServiceTest {
 	
 	private UserService userService = mock(UserService.class);
 	
-	
 	private Errors errors = mock(Errors.class); 
 	
-	//create sut
 	private ValidationService validationService = new ValidationServiceImpl(userService);
-	
-	//if there are errors return false 
 	
 	@Test
 	public void shouldReturnFalseIfThereIsErrors() throws Exception{
-		// add error
 		when(errors.hasErrors()).thenReturn(true);
 		
 		assertFalse(validationService.validate(user, errors));

@@ -17,16 +17,9 @@ public class QuoteServiceImpl implements QuoteService {
 	
 	final static Logger log = LoggerFactory.getLogger(QuoteServiceImpl.class);
 
-	/*@Autowired
-	CounterService counterService;*/
-
 	private final RestTemplate restTemplate;
 
-	/*
-	 * constructor accepts an instance of RestTemplateBuilder created by Spring
-	 * Boot and inject automatically restTemplate, that is used to call the
-	 * remote rest web service
-	 */
+	@Autowired
 	public QuoteServiceImpl(RestTemplateBuilder restTemplateBuilder) {
 		this.restTemplate = restTemplateBuilder.build();
 	}
