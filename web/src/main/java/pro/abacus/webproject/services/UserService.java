@@ -1,6 +1,6 @@
 package pro.abacus.webproject.services;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 
 public interface UserService {
 	

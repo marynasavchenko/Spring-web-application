@@ -3,7 +3,7 @@ package pro.abacus.webproject.services;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 
 @Service
 public class ValidationServiceImpl implements ValidationService {

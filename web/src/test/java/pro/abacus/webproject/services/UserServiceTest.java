@@ -13,7 +13,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.repositories.RoleRepository;
 import pro.abacus.webproject.repositories.UserRepository;
 import pro.abacus.webproject.services.UserService;

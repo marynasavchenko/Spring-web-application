@@ -1,4 +1,4 @@
-package pro.abacus.webproject;
+package pro.abacus.webproject.domain;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

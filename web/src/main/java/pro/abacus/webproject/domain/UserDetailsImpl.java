@@ -1,4 +1,4 @@
-package pro.abacus.webproject.models;
+package pro.abacus.webproject.domain;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 import org.junit.Test;
 import org.springframework.validation.Errors;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.services.UserService;
 import pro.abacus.webproject.services.ValidationService;
 import pro.abacus.webproject.services.ValidationServiceImpl;

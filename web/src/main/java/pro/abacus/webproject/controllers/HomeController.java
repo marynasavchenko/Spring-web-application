@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.services.UserService;
 import pro.abacus.webproject.services.ValidationService;
 

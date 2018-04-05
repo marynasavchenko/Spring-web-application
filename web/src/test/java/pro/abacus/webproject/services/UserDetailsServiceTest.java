@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.repositories.UserRepository;
 import pro.abacus.webproject.services.UserDetailsServiceImpl;
 

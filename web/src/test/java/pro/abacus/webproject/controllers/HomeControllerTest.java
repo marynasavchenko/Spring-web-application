@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import pro.abacus.webproject.controllers.HomeController;
-import pro.abacus.webproject.models.User;
+import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.services.UserService;
 
 import static org.mockito.Mockito.verify;
