@@ -15,37 +15,31 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import pro.abacus.webproject.repositories.UserRepository;
 import pro.abacus.webproject.services.UserDetailsServiceImpl;
 
-
-
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableJpaRepositories(basePackageClasses = UserRepository.class)
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-	
+
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
-	
-	@Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
-	// Override to configure user-details services
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-		auth.userDetailsService(userDetailsService)
-		.passwordEncoder(getPasswordEncoder());
+		auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
 	}
 
-	    //Override to configure how requests are secured by interceptors.
-	    @Override
-	    protected void configure(HttpSecurity http) throws Exception {
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
 
 	        http.csrf().disable();
-	        http
-	        //demands that all HTTP requests coming into the application be authenticated. 
+	        http 
 	        .authorizeRequests()
             .antMatchers("/webService/**")  
             .authenticated()
@@ -58,12 +52,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .and()
             .logout()
             .logoutSuccessUrl("/");
-	        /*.and()
-	        .requiresChannel()
-	        .antMatchers("/registration").requiresSecure();*/
 	     
-	    }
-  
+	}
+
 	private PasswordEncoder getPasswordEncoder() {
 		return new PasswordEncoder() {
 			@Override
@@ -77,9 +68,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			}
 		};
 	}
-	 @Autowired
-	    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-	        auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
-	    }
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+	}
 
 }

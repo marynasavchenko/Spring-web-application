@@ -43,7 +43,7 @@ public class HomeController {
         	log.info("User saved: " + user);
     		return "login";
 		}
-		else{
+		else {
 			log.info("Processing user registration: " + user);
 			return "registration";
 		}
