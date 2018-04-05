@@ -19,7 +19,7 @@ import pro.abacus.webproject.repositories.UserRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class UserRepositoryIntegrationTest {
+public class UserEntityTest {
 
 	@Autowired
 	UserRepository userRepository;
