@@ -1,6 +1,7 @@
 package pro.abacus.webproject.restclient;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
@@ -41,11 +42,11 @@ public class QuoteServiceImplTest {
 	
 		Quote quote = this.service.getDailyQuote("inspire");
 		
-		assertThat(quote.getQuote()).isEqualTo(
-				"Do not worry if you have built your castles in the air. They are where they should be. Now put the foundations under them.");
-		assertThat(quote.getLength()).isEqualTo("122");
-		assertThat(quote.getAuthor()).isEqualTo("Henry David Thoreau");
-		assertThat(quote.getTitle()).isEqualTo("Inspiring Quote of the day");
+		assertEquals(quote.getQuote(),
+		"Do not worry if you have built your castles in the air. They are where they should be. Now put the foundations under them.");
+		assertEquals(quote.getLength(),"122");
+		assertEquals(quote.getAuthor(), "Henry David Thoreau");
+		assertEquals(quote.getTitle(), "Inspiring Quote of the day");
 	}
 
 	
