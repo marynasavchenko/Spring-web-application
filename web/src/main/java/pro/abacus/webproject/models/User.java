@@ -6,6 +6,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.util.Assert;
 
 
 @Entity
@@ -43,6 +44,7 @@ public class User {
 	}
 
 	public User(String name, String email, String password) {
+		Assert.hasLength(name, "Username must not be empty");
 
 		this.name = name;
 		this.email = email;
