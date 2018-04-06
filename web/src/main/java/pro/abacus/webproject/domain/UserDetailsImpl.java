@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserDetailsImpl extends User implements UserDetails {
 
+	private static final long serialVersionUID = 1L;
+
 	public UserDetailsImpl(final User users) {
 		super(users);
 	}

@@ -6,7 +6,6 @@ public class Response {
 	private Contents contents;
 
 	public Response() {
-
 	}
 
 	public Success getSuccess() {
@@ -25,7 +24,6 @@ public class Response {
 		this.contents = contents;
 	}
 
-	/* success or failure of API call */
 	public boolean isSuccess() {
 		if (success != null && success.getTotal() > 0) {
 			return true;

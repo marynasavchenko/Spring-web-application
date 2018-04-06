@@ -95,4 +95,12 @@ public class Quote {
 		this.tags = tags;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Quote [id=" + id + ", title=" + title + ", quote=" + quote + ", author=" + author + ", length=" + length
+				+ ", date=" + date + ", background=" + background + ", category=" + category + ", tags=" + tags + "]";
+	}
+	
+
 }

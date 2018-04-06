@@ -5,7 +5,6 @@ public class Success {
 	private int total;
 
 	public Success() {
-
 	}
 
 	public int getTotal() {
