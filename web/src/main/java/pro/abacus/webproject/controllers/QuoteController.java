@@ -1,13 +1,13 @@
 package pro.abacus.webproject.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.WebApplicationContext;
 
 import pro.abacus.webproject.restclient.*;
 
@@ -15,9 +15,7 @@ import pro.abacus.webproject.restclient.*;
 @RequestMapping(path = "/")
 public class QuoteController {
 
-	
 	private QuoteService quoteService;
-	
 	
 	@Autowired
 	public QuoteController(QuoteService quoteService){
@@ -35,9 +33,10 @@ public class QuoteController {
 
 		Quote quote = quoteService.getDailyQuote(QuoteService.CATEGORY_INSPIRATIONAL);
 		if (quote == null) {
-			return ResponseEntity.notFound().build();
-		}
-		return ResponseEntity.ok(quoteService.showQuote(quote));
-	}
+			return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
 
+		}
+		return new ResponseEntity<String>(quoteService.showQuote(quote), HttpStatus.OK);
+	}
+	
 }
