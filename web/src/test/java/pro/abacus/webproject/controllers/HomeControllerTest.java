@@ -8,25 +8,26 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.validation.Errors;
 
 import pro.abacus.webproject.controllers.HomeController;
 import pro.abacus.webproject.domain.User;
 import pro.abacus.webproject.services.UserService;
+import pro.abacus.webproject.services.ValidationService;
 
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+
 @RunWith(SpringRunner.class)
 @WebMvcTest(HomeController.class)
 @WithMockUser(roles = "USER")
 public class HomeControllerTest {
-	
-	@Autowired
-	private HomeController homeController;
 	
 	@Autowired
 	private MockMvc mockMvc;
@@ -35,7 +36,16 @@ public class HomeControllerTest {
 	private UserService userService;
 	
 	@MockBean
+	private ValidationService validationService;
+	
+	@MockBean
+	private Errors errors;
+	
+	@MockBean
 	private User user;
+	
+	@Autowired
+	private HomeController homeController = new HomeController(userService, validationService);
 
 	@Test
 	public void shouldShowHomePage() throws Exception {
@@ -60,6 +70,8 @@ public class HomeControllerTest {
 	}
 	@Test
 	public void shouldPostRegistrationDetails() throws Exception{
+		
+		
 		 mockMvc.perform(post("/registration")
 				.param("userID", "123")
 				.param("name", "test1")
@@ -67,6 +79,16 @@ public class HomeControllerTest {
 				.param("password", "password1")
 				)
 				.andExpect(status().isOk());
+	}
+	
+	@Test
+	public void shouldSaveUser() throws Exception{
+		when(validationService.validate(user, errors)).thenReturn(true);
+		
+		homeController.processRegistrationForm(user, errors);
+		
+		verify(validationService).validate(user, errors);
+		verify(userService).save(user);
 	}
 	
 	@Test
