@@ -1,5 +1,7 @@
 package pro.abacus.webproject.restclient;
 
+import java.util.ArrayList;
+
 import org.springframework.util.Assert;
 
 public class Response {
@@ -37,18 +39,18 @@ public class Response {
 	public boolean isResponseSuccessful() {
 		return success.getTotal() > 0;	
 	}
+	
+	public Quote getDefaultQuote(){
+		return new Quote("Once you stop learning, you start dying", "Albert Einstein");
+	}
 
-	/*
-	 * return quote if collection is not empty otherwise null after call was
-	 * successful
-	 */
 	public Quote getQuote() {
-		if (isResponseSuccessful()) {
-			if (contents != null && contents.getQuotes().size() > 0) {
-				return contents.getQuotes().get(0);
-			}
+		
+		ArrayList<Quote> quotes = contents.getQuotes();
+		if (isResponseSuccessful() && quotes.size() > 0) {
+			return quotes.get(0);
 		}
-		return null;
+		return getDefaultQuote();
 	}
 
 }

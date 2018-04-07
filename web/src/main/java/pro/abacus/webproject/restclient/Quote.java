@@ -21,6 +21,11 @@ public class Quote {
 	public Quote() {
 
 	}
+	public Quote(String quote, String author){
+		this.quote=quote;
+		this.author=author;
+	}
+	
 
 
 	public String getId() {
