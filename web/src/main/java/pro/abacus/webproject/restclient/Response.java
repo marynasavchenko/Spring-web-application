@@ -1,34 +1,41 @@
 package pro.abacus.webproject.restclient;
 
+import org.springframework.util.Assert;
+
 public class Response {
 
-	private Success success;
-	private Contents contents;
-
+	private SuccessResponse success;
+	private ContentsResponse contents;
+	
 	public Response() {
+		
 	}
 
-	public Success getSuccess() {
-		return success;
-	}
-
-	public void setSuccess(Success success) {
+	public Response(SuccessResponse success, ContentsResponse contents) {
+		Assert.notNull(success, "Field success must not be null");
+		Assert.notNull(contents, "Contens must not be null");
+		this.contents = contents;
 		this.success = success;
 	}
 
-	public Contents getContents() {
+	public SuccessResponse getSuccess() {
+		return success;
+	}
+
+	public void setSuccess(SuccessResponse success) {
+		this.success = success;
+	}
+
+	public ContentsResponse getContents() {
 		return contents;
 	}
 
-	public void setContents(Contents contents) {
+	public void setContents(ContentsResponse contents) {
 		this.contents = contents;
 	}
 
-	public boolean isSuccess() {
-		if (success != null && success.getTotal() > 0) {
-			return true;
-		}
-		return false;
+	public boolean isResponseSuccessful() {
+		return success.getTotal() > 0;	
 	}
 
 	/*
@@ -36,7 +43,7 @@ public class Response {
 	 * successful
 	 */
 	public Quote getQuote() {
-		if (isSuccess()) {
+		if (isResponseSuccessful()) {
 			if (contents != null && contents.getQuotes().size() > 0) {
 				return contents.getQuotes().get(0);
 			}

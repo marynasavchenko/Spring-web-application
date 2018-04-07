@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Contents {
+public class ContentsResponse {
 
 	private ArrayList<Quote> quotes = new ArrayList<Quote>(0);
 
-	public Contents() {
+	public ContentsResponse() {
 
 	}
 

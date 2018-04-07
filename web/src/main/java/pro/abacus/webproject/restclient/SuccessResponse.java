@@ -1,10 +1,10 @@
 package pro.abacus.webproject.restclient;
 
-public class Success {
+public class SuccessResponse {
 
 	private int total;
 
-	public Success() {
+	public SuccessResponse() {
 	}
 
 	public int getTotal() {
