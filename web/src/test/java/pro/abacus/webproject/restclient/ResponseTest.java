@@ -65,7 +65,7 @@ public class ResponseTest {
 		when(contentsResponse.getQuotes()).thenReturn(quotesFromRestApi);
 		when(successResponse.getTotal()).thenReturn(1);
 		
-		assertEquals(quote,response.getQuote());
+		assertEquals(quote,response.getQuoteObject());
 	}
 	
 	@Test
@@ -73,9 +73,9 @@ public class ResponseTest {
 		Response response =new Response(successResponse, contentsResponse);
 		when(successResponse.getTotal()).thenReturn(0);
 		
-		assertNotNull(response.getDefaultQuote());
-		assertEquals(DEFAULT_QUOTE_AUTHOR, response.getDefaultQuote().getAuthor());
-		assertEquals(DEFAULT_QUOTE, response.getDefaultQuote().getQuote());
+		Quote defaultQuote =response.getQuoteObject();
+		assertEquals(DEFAULT_QUOTE_AUTHOR, defaultQuote.getAuthor());
+		assertEquals(DEFAULT_QUOTE, defaultQuote.getQuote());
 	}
 
 }

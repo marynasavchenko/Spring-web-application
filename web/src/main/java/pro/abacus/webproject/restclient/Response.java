@@ -2,15 +2,16 @@ package pro.abacus.webproject.restclient;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
+@Component
 public class Response {
 
 	private SuccessResponse success;
 	private ContentsResponse contents;
 	
 	public Response() {
-		
 	}
 
 	public Response(SuccessResponse success, ContentsResponse contents) {
@@ -40,17 +41,19 @@ public class Response {
 		return success.getTotal() > 0;	
 	}
 	
-	public Quote getDefaultQuote(){
-		return new Quote("Once you stop learning, you start dying", "Albert Einstein");
-	}
 
-	public Quote getQuote() {
+	public Quote getQuoteObject() {
 		
 		ArrayList<Quote> quotes = contents.getQuotes();
 		if (isResponseSuccessful() && quotes.size() > 0) {
 			return quotes.get(0);
 		}
-		return getDefaultQuote();
+		return new Quote().getDefaultQuote();
+	}
+
+	@Override
+	public String toString() {
+		return "Response [success=" + success + ", contents=" + contents + "]";
 	}
 
 }

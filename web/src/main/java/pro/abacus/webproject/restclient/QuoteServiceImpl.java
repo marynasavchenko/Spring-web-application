@@ -17,27 +17,35 @@ public class QuoteServiceImpl implements QuoteService {
 	
 	private static final String REST_API_URL = "http://quotes.rest/qod.json?categorie={inspire}";
 	
-
 	private final RestTemplate restTemplate;
+	
+	private Response response;
+	
+	private Quote quote;
 
 	@Autowired
-	public QuoteServiceImpl(RestTemplateBuilder restTemplateBuilder) {
+	public QuoteServiceImpl(RestTemplateBuilder restTemplateBuilder, Response response, Quote quote) {
 		this.restTemplate = restTemplateBuilder.build();
+		this.response=response;
+		this.quote=quote;
 	}
 	
 	@Override
 	public Quote getDailyQuote(String category) {
 
 		trimCategory(category);
-		Response response = this.restTemplate.getForObject(REST_API_URL, Response.class, category);
-		Quote quote = response.getQuote();
-		log.info("Getting quote from rest service: " + quote);
-		return quote;
+
+		response = this.restTemplate.getForObject(REST_API_URL, Response.class, category);
+		if (response != null) {
+			quote = response.getQuoteObject();
+			log.info("Getting quote from rest service: " + quote);
+			return quote;
+		}
+		return quote.getDefaultQuote();
 	}
 
 	@Override
 	public String showQuote(Quote quote) {
-
 		return "Quote of the day: " + quote.getQuote() + "\n" + "Author: " + quote.getAuthor();
 	}
 	
@@ -47,6 +55,5 @@ public class QuoteServiceImpl implements QuoteService {
 		}
 		
 	}
-
 
 }

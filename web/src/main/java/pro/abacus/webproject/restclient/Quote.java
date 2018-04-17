@@ -3,8 +3,11 @@ package pro.abacus.webproject.restclient;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
 
@@ -21,13 +24,12 @@ public class Quote {
 	public Quote() {
 
 	}
+	
 	public Quote(String quote, String author){
 		this.quote=quote;
 		this.author=author;
 	}
 	
-
-
 	public String getId() {
 		return id;
 	}
@@ -105,6 +107,10 @@ public class Quote {
 	public String toString() {
 		return "Quote [id=" + id + ", title=" + title + ", quote=" + quote + ", author=" + author + ", length=" + length
 				+ ", date=" + date + ", background=" + background + ", category=" + category + ", tags=" + tags + "]";
+	}
+	
+	public Quote getDefaultQuote(){
+		return new Quote("Once you stop learning, you start dying", "Albert Einstein");
 	}
 	
 

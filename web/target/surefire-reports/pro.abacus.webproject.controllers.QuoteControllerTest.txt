@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pro.abacus.webproject.controllers.QuoteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.509 sec - in pro.abacus.webproject.controllers.QuoteControllerTest

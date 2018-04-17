@@ -15,4 +15,9 @@ public class SuccessResponse {
 		this.total = total;
 	}
 
+	@Override
+	public String toString() {
+		return "SuccessResponse [total=" + total + "]";
+	}
+
 }
