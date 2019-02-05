@@ -1,7 +1,7 @@
 package pro.abacus.webproject.domain;
 
-import java.util.Set;
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -50,6 +50,4 @@ public class Role {
 	public String toString() {
 		return "Role [roleId=" + roleId + ", role=" + role + ", users=" + users + "]";
 	}
-	
-	
 }

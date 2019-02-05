@@ -1,10 +1,9 @@
 package pro.abacus.webproject.restclient;
 
-import java.util.ArrayList;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.util.Assert;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.ArrayList;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ContentsResponse {
@@ -14,12 +13,12 @@ public class ContentsResponse {
 	public ContentsResponse() {
 
 	}
-	
+
 	public ContentsResponse(ArrayList<Quote> quotes) {
 		Assert.notNull(quotes, "Quotes must not be null");
 		this.quotes = new ArrayList<Quote>(0);
 	}
-	
+
 	public ArrayList<Quote> getQuotes() {
 		return quotes;
 	}

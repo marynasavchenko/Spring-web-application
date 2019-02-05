@@ -10,12 +10,11 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
 @Configuration
 @EnableWebMvc
 @EnableAutoConfiguration
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
-	
+
 	final static Logger log = LoggerFactory.getLogger(MvcConfiguration.class);
 
 	@Override
@@ -23,7 +22,6 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		log.info("in mvc configuration");
 		registry.addViewController("/").setViewName("home");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-
 	}
 
 	@Override
@@ -38,5 +36,4 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		viewResolver.setPrefix("/templates");
 		return viewResolver;
 	}
-
 }

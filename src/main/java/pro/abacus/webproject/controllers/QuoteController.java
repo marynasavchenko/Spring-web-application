@@ -16,10 +16,10 @@ import pro.abacus.webproject.restclient.*;
 public class QuoteController {
 
 	private QuoteService quoteService;
-	
+
 	@Autowired
-	public QuoteController(QuoteService quoteService){
-		this.quoteService=quoteService;
+	public QuoteController(QuoteService quoteService) {
+		this.quoteService = quoteService;
 	}
 
 	@PreAuthorize("hasAuthority('ROLE_USER')")
@@ -34,9 +34,7 @@ public class QuoteController {
 		Quote quote = quoteService.getDailyQuote(QuoteService.CATEGORY_INSPIRATIONAL);
 		if (quote == null) {
 			return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
-
 		}
 		return new ResponseEntity<String>(quoteService.showQuote(quote), HttpStatus.OK);
 	}
-	
 }

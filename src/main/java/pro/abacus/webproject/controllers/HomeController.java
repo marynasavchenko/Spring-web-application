@@ -19,17 +19,17 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping(path = "/")
 public class HomeController {
-	
+
 	final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
 	private UserService userService;
-	
+
 	private ValidationService validationService;
-	
+
 	@Autowired
-	public HomeController(UserService userService, ValidationService validationService){
-		this.userService=userService;	
-		this.validationService=validationService;
+	public HomeController(UserService userService, ValidationService validationService) {
+		this.userService = userService;
+		this.validationService = validationService;
 	}
 
 	@GetMapping("/registration")
@@ -39,13 +39,12 @@ public class HomeController {
 
 	@PostMapping("/registration")
 	public String processRegistrationForm(@Valid User user, Errors errors) {
-		
-		if (validationService.validate(user, errors)){
+
+		if (validationService.validate(user, errors)) {
 			userService.save(user);
-        	log.info("User saved: " + user);
-    		return "login";
-		}
-		else {
+			log.info("User saved: " + user);
+			return "login";
+		} else {
 			log.info("Processing user registration: " + user);
 			return "registration";
 		}
@@ -57,7 +56,8 @@ public class HomeController {
 	}
 
 	@PostMapping("/login")
-	public @ResponseBody String processLoginForm(Model model, String error) {
+	public @ResponseBody
+	String processLoginForm(Model model, String error) {
 		return "login";
 	}
 

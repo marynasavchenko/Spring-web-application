@@ -6,10 +6,9 @@ import pro.abacus.webproject.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	public Boolean existsByName(String name);
+	Boolean existsByName(String name);
 
-	public Boolean existsByPassword(String password);
+	Boolean existsByPassword(String password);
 
 	User findByName(String username);
-	
 }

@@ -1,16 +1,16 @@
 package pro.abacus.webproject.restclient;
 
-import java.util.ArrayList;
-
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+
+import java.util.ArrayList;
 
 @Component
 public class Response {
 
 	private SuccessResponse success;
 	private ContentsResponse contents;
-	
+
 	public Response() {
 	}
 
@@ -38,12 +38,12 @@ public class Response {
 	}
 
 	public boolean isResponseSuccessful() {
-		return success.getTotal() > 0;	
+		return success.getTotal() > 0;
 	}
-	
+
 
 	public Quote getQuoteObject() {
-		
+
 		ArrayList<Quote> quotes = contents.getQuotes();
 		if (isResponseSuccessful() && quotes.size() > 0) {
 			return quotes.get(0);

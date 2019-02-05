@@ -1,12 +1,12 @@
 package pro.abacus.webproject.domain;
 
-import java.util.Set;
-import javax.persistence.*;
-import javax.validation.constraints.Size;
-
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.util.Assert;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
+import java.util.Set;
 
 
 @Entity
@@ -16,19 +16,19 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private int userId;
-	
-	@NotBlank(message="Name is required")
-	@Size(min=2, max=30,message="Name must be at least 2 characters long")
+
+	@NotBlank(message = "Name is required")
+	@Size(min = 2, max = 30, message = "Name must be at least 2 characters long")
 	@Column(name = "name")
 	private String name;
-	
-	@NotBlank(message="Email is required")
+
+	@NotBlank(message = "Email is required")
 	@Email
 	@Column(name = "email")
 	private String email;
 
-	@NotBlank(message="Password is required")
-	@Size(min=8, message="Password must be at least 8 characters long")
+	@NotBlank(message = "Password is required")
+	@Size(min = 8, message = "Password must be at least 8 characters long")
 	@Column(name = "password")
 	private String password;
 
@@ -40,12 +40,10 @@ public class User {
 	private Set<Role> roles;
 
 	public User() {
-
 	}
 
 	public User(String name, String email, String password) {
 		Assert.hasLength(name, "Username must not be empty");
-
 		this.name = name;
 		this.email = email;
 		this.password = password;
@@ -113,6 +111,4 @@ public class User {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password + ", active="
 				+ active + ", roles=" + roles + "]";
 	}
-	
-
 }

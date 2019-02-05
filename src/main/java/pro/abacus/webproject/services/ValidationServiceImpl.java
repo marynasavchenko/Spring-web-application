@@ -17,18 +17,15 @@ public class ValidationServiceImpl implements ValidationService {
 
 	@Override
 	public boolean validate(User user, Errors errors) {
-		return !(errors.hasErrors()||rejectIfDuplicate(user, errors));		
+		return !(errors.hasErrors() || rejectIfDuplicate(user, errors));
 	}
-	
-	public boolean rejectIfDuplicate(User user, Errors errors){
-		if (userService.isDuplicate(user)){
-			errors.rejectValue("name","name.duplicate", "User with this username already exists");
-			
+
+	public boolean rejectIfDuplicate(User user, Errors errors) {
+		if (userService.isDuplicate(user)) {
+			errors.rejectValue("name", "name.duplicate", "User with this username already exists");
+
 			return true;
 		}
 		return false;
 	}
-	
-	
-
 }

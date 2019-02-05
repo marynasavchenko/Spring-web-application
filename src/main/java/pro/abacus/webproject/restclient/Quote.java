@@ -24,12 +24,12 @@ public class Quote {
 	public Quote() {
 
 	}
-	
-	public Quote(String quote, String author){
-		this.quote=quote;
-		this.author=author;
+
+	public Quote(String quote, String author) {
+		this.quote = quote;
+		this.author = author;
 	}
-	
+
 	public String getId() {
 		return id;
 	}
@@ -108,10 +108,10 @@ public class Quote {
 		return "Quote [id=" + id + ", title=" + title + ", quote=" + quote + ", author=" + author + ", length=" + length
 				+ ", date=" + date + ", background=" + background + ", category=" + category + ", tags=" + tags + "]";
 	}
-	
-	public Quote getDefaultQuote(){
+
+	public Quote getDefaultQuote() {
 		return new Quote("Once you stop learning, you start dying", "Albert Einstein");
 	}
-	
+
 
 }
