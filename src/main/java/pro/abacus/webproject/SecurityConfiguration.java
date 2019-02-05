@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import pro.abacus.webproject.repositories.UserRepository;
 
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -34,8 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-		auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
+		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
 
 	@Override
@@ -56,20 +54,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.logout()
 				.logoutSuccessUrl("/");
 
-	}
-
-	private PasswordEncoder getPasswordEncoder() {
-		return new PasswordEncoder() {
-			@Override
-			public String encode(CharSequence charSequence) {
-				return charSequence.toString();
-			}
-
-			@Override
-			public boolean matches(CharSequence charSequence, String s) {
-				return true;
-			}
-		};
 	}
 
 	@Autowired
