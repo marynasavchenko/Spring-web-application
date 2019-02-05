@@ -9,11 +9,10 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
 import pro.abacus.webproject.repositories.UserRepository;
-import pro.abacus.webproject.services.UserDetailsServiceImpl;
 
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableJpaRepositories(basePackageClasses = UserRepository.class)
@@ -21,8 +20,12 @@ import pro.abacus.webproject.services.UserDetailsServiceImpl;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+	private UserDetailsService userDetailsService;
+
 	@Autowired
-	private UserDetailsServiceImpl userDetailsService;
+	public SecurityConfiguration(UserDetailsService userDetailsService) {
+		this.userDetailsService = userDetailsService;
+	}
 
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -38,21 +41,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-	        http.csrf().disable();
-	        http 
-	        .authorizeRequests()
-            .antMatchers("/webService/**")  
-            .authenticated()
-            .anyRequest()
-            .permitAll()
-            .and()
-            .formLogin()
-             .loginPage("/login")
-            .permitAll()
-            .and()
-            .logout()
-            .logoutSuccessUrl("/");
-	     
+		http.csrf().disable();
+		http
+				.authorizeRequests()
+				.antMatchers("/webService/**")
+				.authenticated()
+				.anyRequest()
+				.permitAll()
+				.and()
+				.formLogin()
+				.loginPage("/login")
+				.permitAll()
+				.and()
+				.logout()
+				.logoutSuccessUrl("/");
+
 	}
 
 	private PasswordEncoder getPasswordEncoder() {
