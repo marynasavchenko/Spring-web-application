@@ -8,7 +8,6 @@ import pro.abacus.webproject.domain.User;
 @Service
 public class ValidationServiceImpl implements ValidationService {
 
-
 	private UserService userService;
 
 	public ValidationServiceImpl(UserService userService) {
