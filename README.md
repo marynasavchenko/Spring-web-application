@@ -13,7 +13,7 @@ mvn clean package
 
 ## **Running the tests**
 
-1.To run tests via Maven:
+1. To run tests via Maven:
 ```
 mvn test
 ```
