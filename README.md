@@ -4,16 +4,16 @@ Protected web application which has registration/login page, users database, ele
 (https://theysaidso.com/api/#qod). 
 
 
-## **Installing**
+## **Building**
 
-1. To generate .war file run command 
+1. To build project (package compiled code in .jar):
 ```
-mvn clean install
+mvn clean package
 ```
 
 ## **Running the tests**
 
-1.To run tests via Maven use command
+1.To run tests via Maven:
 ```
 mvn test
 ```
